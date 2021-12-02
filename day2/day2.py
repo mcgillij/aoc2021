@@ -9,7 +9,6 @@ with open('day2_input', 'r') as f:
     # Part 1
     pos = namedtuple('Position', ['x', 'y'])
     sub_position = pos(0, 0)
-    print(sub_position)
 
     for command, count in command_list:
         match command:
@@ -26,7 +25,6 @@ with open('day2_input', 'r') as f:
     # Part 2
     pos = namedtuple('Position', ['x', 'y', 'aim'])
     sub_position = pos(0, 0, 0)
-    print(sub_position)
 
     for command, count in command_list:
         match command:
