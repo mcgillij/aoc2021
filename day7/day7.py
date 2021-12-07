@@ -1,11 +1,10 @@
-# aoc Day6
+# aoc Day7
 
 from statistics import mean, median
 
 #with open('test_input', 'r') as f:
 with open('day7_input', 'r') as f:
     crab_positions = list(map(int, f.read().strip().split(',')))
-    print(crab_positions)
 
     median_distance = int(median(crab_positions))
     mean_distance = int(mean(crab_positions))
@@ -22,5 +21,5 @@ with open('day7_input', 'r') as f:
         part2_choices[2] += sum([i for i in range(1, abs(crab - mean_distance - 1) + 1)])
         fuel_for_part2 = min(part2_choices)
 
-    print(fuel_for_part1)
-    print(fuel_for_part2)
+    print(f'{fuel_for_part1=}')
+    print(f'{fuel_for_part2=}')
