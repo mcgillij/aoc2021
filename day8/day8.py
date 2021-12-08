@@ -4,12 +4,11 @@ from collections import Counter
 #with open('test_input', 'r') as f:
 with open('day8_input', 'r') as f:
     data = [line.strip().split("|") for line in f.readlines()]
-    print(data)
     # 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
     base_chars = "abcefg cf acdeg acdfg bdcf abdfg abdefg acf abcdefg abcdfg"
     char_mapping = Counter(base_chars)
 
-    map_lookup = { 
+    map_lookup = {
             sum([*map(char_mapping.get, nums)]): i
             for i, nums in zip(range(10), base_chars.split())
             }
