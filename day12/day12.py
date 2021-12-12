@@ -22,7 +22,7 @@ with open('day12_input', 'r') as f:
                 total += pathfinding(path, visited, one_time)
 
         for path in (path for path in paths[cave] if path in visited and path != 'start'):
-            if one_time == ' ':
+            if one_time == True:
                 total += pathfinding(path, visited, path)
             else:
                 total += 0
@@ -32,5 +32,5 @@ with open('day12_input', 'r') as f:
         return total;
 
 
-    print(f'Part1: {pathfinding("start", set(), "")}')
-    print(f'Part2: {pathfinding("start", set(), " ")}')
+    print(f'Part1: {pathfinding("start", set(), False)}')
+    print(f'Part2: {pathfinding("start", set(), True)}')
