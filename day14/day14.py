@@ -29,9 +29,9 @@ with open('day14_input', 'r') as f:
 
             print(f'Insertions: {_ + 1}: {max(polymer_template.values()) - min(polymer_template.values())}')
 
-
+# only one at a time since we modify the insert dict
 # part1
 process(PART1_INSERTIONS)
 
 # part2
-process(PART2_INSERTIONS)
+#process(PART2_INSERTIONS)
